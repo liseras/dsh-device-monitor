@@ -1,0 +1,20 @@
+{
+  "name": "dsh-device-monitor",
+  "version": "1.0.0",
+  "description": "DSHA device temperature monitor with overheat alerts and per-app memory breakdown",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json",
+    "./cordis.patch.yml": "./cordis.patch.yml"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-mcp-client": "0.2.0-rc.2"
+  }
+}
